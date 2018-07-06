@@ -33,4 +33,15 @@ public class AccountServiceTest {
 
         Assert.assertEquals("Account not equals",account,account1);
     }
+
+    @Test
+    public void updateAccount() {
+
+        final Account account = new Account();
+        account.setId("id");
+
+        Account account1 = accountService.createAccount(account);
+
+        Assert.assertEquals("Account not equals",account,account1);
+    }
 }

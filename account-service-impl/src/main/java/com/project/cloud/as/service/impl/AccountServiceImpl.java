@@ -6,6 +6,8 @@ import com.project.cloud.as.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AccountServiceImpl implements AccountService{
 
@@ -20,5 +22,15 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Account createAccount(Account account) {
         return accountRepository.save(account);
+    }
+
+    @Override
+    public Account updateAccount(Account account) {
+        return accountRepository.save(account);
+    }
+
+    @Override
+    public List<Account> getAllAccounts() {
+        return accountRepository.findAll();
     }
 }
